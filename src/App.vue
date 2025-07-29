@@ -1,17 +1,20 @@
 <script setup>
+// eslint-disable-next-line no-unused-vars
 import JSONLab from './components/JSONLab.vue'
 import BHeader from './components/BHeader.vue'
-import LibraryRegistrationForm from './components/LibraryRegistrationForm.vue'
+// eslint-disable-next-line no-unused-vars
+import HomeView from './views/HomeView.vue'
 </script>
 
 <template>
   <header>
-    <BHeader />
+   <BHeader />
   </header>
 
   <main>
-    <LibraryRegistrationForm />
+    <!-- <HomeView /> -->
     <!-- <JSONLab /> -->
+    <router-view></router-view>
   </main>
 </template>
 
