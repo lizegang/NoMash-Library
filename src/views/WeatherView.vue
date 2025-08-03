@@ -47,13 +47,13 @@ export default {
       return this.weatherData ? Math.floor(this.weatherData.main.temp - 273) : null;
     },
     iconUrl() {
-      return this.weatherData ? `http://api.openweathermap.org/img/w/${this.weatherData.weather[0].icon}.png` : null;
+      return this.weatherData ? `https://api.openweathermap.org/img/w/${this.weatherData.weather[0].icon}.png` : null;
     },
   },
   methods: {
     async searchByCity() {
       if (this.city) {
-        const url = `http://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${apikey}`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${apikey}`;
         await this.fetchWeatherData(url);
       }
     },
